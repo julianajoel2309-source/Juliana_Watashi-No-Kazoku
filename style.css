@@ -19,7 +19,7 @@ body {
     position: relative;
     background: linear-gradient( 135deg, #e5ebdd,#d4dfcc,#f3f4eb);
     margin: -30px -30px 0;
-    padding: 25px 150px;
+    padding: 25px 180px;
 }
 header {
     padding: 65px 25px;
@@ -34,7 +34,7 @@ header {
 .judul h1 {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 75px;
+    font-size: 85px;
     font-weight: bold;
     line-height: 1.2;
     letter-spacing: 1px;
@@ -43,15 +43,14 @@ header {
 .judul h2 {
     margin: 16px 0 0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: normal;
     letter-spacing: 5px;
     color: #e4ebda;
 }
-
 .judul p {
     font-family:'Courier New', Courier, monospace;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1px;
     color: #d2dfc3;
     font-weight: normal;
@@ -71,26 +70,29 @@ header {
     gap: 5px;
     align-items: center;
     justify-content: center;
-    width: 260px;
+    width: 280px;
     height: 85px;
     align-items: center;
     background: #eae7da;
-    color: #658568;
+    color: #6f8a72;
     border: 2px solid #cbcebc;
-    border-radius: 30px;
+    border-radius: 20px;
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     transition: all 0.3s ease;
 }
 .japanese{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     align-items: center;
+    padding: 5px 5px 0;
 }
 .romaji{
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 1px;
     align-items: center;
+    padding: 0 5px 5px;
+    margin-top: -5px;
    
 }
 .tombol:hover {
@@ -163,7 +165,6 @@ header {
     letter-spacing: 5px;
     line-height: 1.8;
 }
-
 .penjelasan h2 {
     margin: 0 0 20px;
     font-family: Georgia, "Times New Roman", serif;
@@ -369,7 +370,6 @@ summary:hover {
     position: relative;
     top: -22.5px;
 }
-
 .halaman-judul header {
     animation: fadeJudul 1s ease-out;
 }
@@ -383,163 +383,174 @@ summary:hover {
         transform: translateY(0);
     }
 }
-
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+    * {
+        box-sizing: border-box;
+    }
     body {
-        padding: 10px;
-        overflow-x: hidden;
+        padding: 12px;
     }
     .halaman-judul {
         min-height: 100vh;
-        margin: -10px -10px 0;
-        padding: 30px 20px;
+        margin: -12px -12px 0;
+        padding: 20px 12px;
+        justify-content: center;
     }
     header {
-        padding: 45px 15px;
-        margin: 0 5px 30px;
-        border-radius: 22px;
-        outline: 3px solid rgba(82, 107, 73, 0.5);
-        outline-offset: 6px;
+        margin: 20px 20px;
+        padding: 35px 25px;
     }
     .judul h1 {
-        font-size: 35px;
-        line-height: 1.15;
+        font-size: 60px;
     }
+
     .judul h2 {
-        font-size: 15px;
-        letter-spacing: 3px;
+        font-size: 29px;
+        letter-spacing: 5px;
+        margin-top: 15px;
     }
     .judul p {
-        font-size: 10px;
-        line-height: 1.6;
+        font-size: 12px;  
     }
     .tombol-navigasi {
+        display: flex;
         flex-direction: column;
-        gap: 15px;
-        margin-top: 35px;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        margin-top: 38px;
     }
     .tombol {
-        width: min(280px, 90%);
-        height: 70px;
-        border-radius: 20px;
+        width: 100%;
+        max-width: 300px;
+        padding: 5px;
+        text-align: center;
+        margin-top: 3px;
     }
-    .japanese {
+    .japanese{
+        font-size: 20px;
+    }
+    .romaji{
         font-size: 15px;
-    }
-    .romaji {
-        font-size: 10px;
     }
     .halaman-penjelasan {
         min-height: 100vh;
-        margin: 0 -10px;
-        padding: 45px 15px;
-        position: relative;
+        margin: 0 -12px;
+        padding: 30px 15px;
+        justify-content: flex-start;
+        gap: 0;
     }
-    .penjelasan {
-        position: relative;
-        z-index: 1;
-
-        width: 100%;
-        max-width: 100%;
-        margin: 25px auto;
-        padding: 25px 20px;
-        border-radius: 18px;
+    .judul-penjelasan {
+        margin: 0 auto 15px;
     }
     .judul-penjelasan h1 {
-        font-size: 30px;
-        line-height: 1.3;
+        font-size: 40px;
+        margin-top: 12px;
     }
     .judul-penjelasan p {
-        font-size: 15px;
-        letter-spacing: 2px;
-        line-height: 1.6;
+        margin: 5px 0 15px;
+        font-size: 20px;
+    }
+    .penjelasan {
+        max-width: 100%;
+        margin: 6px 25px 0;
+        padding: 20px 35px;
     }
     .penjelasan h2 {
-        font-size: 19px;
-        line-height: 1.7;
-        text-align: center;
+        font-size: 23px;
+        line-height: 1.9;
     }
     .penjelasan p {
-        font-size: 13px;
-        line-height: 1.7;
-        letter-spacing: 1px;
-    }
-    .halaman-penjelasan::before {
-        top: 110px;
-        left: 0;
-        font-size: 65px;
-        z-index: 0;
-    }
-    .halaman-penjelasan::after {
-        right: 0;
-        bottom: 70px;
-        font-size: 70px;
-        z-index: 0;
+        font-size: 18px;
+        line-height: 1.8;
     }
     .halaman-bagan {
         min-height: 100vh;
-        margin: 0 -10px -10px;
-        padding: 45px 15px;
-        background-size: cover, 980px auto;
-        background-position: center, center 225px;
-    }
-    .judul-bagan {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto 40px;
-        padding: 20px 15px;
+        margin: 0 -12px -12px;
+        padding: 30px 12px;
+        background-attachment: fixed;
+        background-position: center ;
+        background-size: cover, auto 600px;
     }
     .judul-bagan h2 {
-        font-size: 30px;
-        line-height: 1.3;
+        font-size: 40px;
     }
     .judul-bagan p {
-        font-size: 12px;
-        letter-spacing: 1px;
-        line-height: 1.6;
+        font-size: 20px;
+        line-height: 1.7;
     }
-    .orang-tua,
+    .orang-tua {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+    .orang-tua .anggota {
+        max-width: 230px;
+    }
     .anak-anak {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px 16px;
+        margin-top: 21px;
     }
-    .anggota,
-    .anggota-kecil {
-        width: min(280px, 90%);
+    .anak-anak .anggota-kecil {
+        max-width: 230px;
     }
     .card {
         width: 100%;
-        border-radius: 18px;
+        padding: 8px;
+        border-radius: 15px;
     }
-    .anak-anak .card {
-        margin-top: 0;
+    .card h2 {
+        font-size: 18px;
+    }
+    .card p {
+        font-size: 12px;
     }
     .foto {
-        height: 220px;
+        width: 100%;
+        height: 200px;
+    }
+    .deskripsi {
+        padding: 8px 8px;
+    }
+    .deskripsi p {
+        font-size: 11x;
+        line-height: 1.7;
     }
     .garis-ayah,
-    .garis-ibu,
-    .garis-tengah {
+    .garis-ibu {
+        height: 38px;
+        flex-grow: 1;
         width: 4px;
-        height: 40px;
     }
     .garis-hubung-orang-tua {
-        width: 70%;
-        max-width: 325px;
+        width: 250px;
         height: 4px;
     }
+    .garis-tengah {
+        height: 60px;
+        width: 4px;
+    }
     .garis-anak {
-        width: 100%;
-        max-width: 965px;
+        width: 250px;
         height: 4px;
     }
     .garis-anak-1,
     .garis-anak-2,
     .garis-anak-3,
     .garis-anak-4 {
+        height: 38px;
         width: 4px;
-        height: 40px;
-        top: 0;
     }
+    .garis-anak-3,
+    .garis-anak-4{
+        margin-top: 2.5px;
+    }
+    .halaman-penjelasan::after {
+    bottom: -10px;
+    right: 12px;
+}
 }
