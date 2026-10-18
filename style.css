@@ -339,7 +339,6 @@ summary:hover {
     height: 80px;
     background: #72502f;
     margin: auto;
-    flex-grow: 1;
 }
 .garis-hubung-orang-tua {
     width: 325px;
@@ -401,16 +400,15 @@ summary:hover {
         padding: 35px 25px;
     }
     .judul h1 {
-        font-size: 60px;
+        font-size: 37.4px;
     }
-
     .judul h2 {
-        font-size: 29px;
+        font-size: 20px;
         letter-spacing: 5px;
         margin-top: 15px;
     }
     .judul p {
-        font-size: 12px;  
+        font-size: 12px;
     }
     .tombol-navigasi {
         display: flex;
@@ -422,16 +420,14 @@ summary:hover {
     }
     .tombol {
         width: 100%;
-        max-width: 300px;
-        padding: 5px;
+        max-width: 250px;
         text-align: center;
-        margin-top: 3px;
     }
-    .japanese{
+    .japanese {
         font-size: 20px;
     }
-    .romaji{
-        font-size: 15px;
+    .romaji {
+        font-size: 13px;
     }
     .halaman-penjelasan {
         min-height: 100vh;
@@ -444,24 +440,24 @@ summary:hover {
         margin: 0 auto 15px;
     }
     .judul-penjelasan h1 {
-        font-size: 40px;
+        font-size: 33px;
         margin-top: 12px;
     }
     .judul-penjelasan p {
         margin: 5px 0 15px;
-        font-size: 20px;
+        font-size: 17px;
     }
     .penjelasan {
         max-width: 100%;
-        margin: 6px 25px 0;
-        padding: 20px 35px;
+        margin: 6px 0;
+        padding: 20px 20px;
     }
     .penjelasan h2 {
         font-size: 23px;
         line-height: 1.9;
     }
     .penjelasan p {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 1.8;
     }
     .halaman-bagan {
@@ -469,14 +465,15 @@ summary:hover {
         margin: 0 -12px -12px;
         padding: 30px 12px;
         background-attachment: fixed;
-        background-position: center ;
-        background-size: cover, auto 600px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .judul-bagan h2 {
-        font-size: 40px;
+        font-size: 33px;
     }
     .judul-bagan p {
-        font-size: 20px;
+        font-size: 17px;
         line-height: 1.7;
     }
     .orang-tua {
@@ -486,6 +483,8 @@ summary:hover {
     }
     .orang-tua .anggota {
         max-width: 230px;
+        display: flex;
+        justify-content: center;
     }
     .anak-anak {
         display: flex;
@@ -494,14 +493,18 @@ summary:hover {
         align-items: flex-start;
         gap: 20px 16px;
         margin-top: 21px;
+        width: 100%;
+        justify-content: center;
     }
     .anak-anak .anggota-kecil {
         max-width: 230px;
+        flex: 0 0 calc(50% - 8px);
     }
     .card {
         width: 100%;
         padding: 8px;
         border-radius: 15px;
+        margin: 0 5px;
     }
     .card h2 {
         font-size: 18px;
@@ -511,14 +514,22 @@ summary:hover {
     }
     .foto {
         width: 100%;
-        height: 200px;
+        height: 150px;
     }
     .deskripsi {
-        padding: 8px 8px;
+        padding: 8px;
     }
     .deskripsi p {
-        font-size: 11x;
         line-height: 1.7;
+    }
+    .card .deskripsi .romaji-desc{
+    font-size: 12px;
+    }
+    .card .deskripsi .japan-desc{
+    font-size: 15px;
+    }
+    summary{
+        font-size: 13px;
     }
     .garis-ayah,
     .garis-ibu {
@@ -527,7 +538,7 @@ summary:hover {
         width: 4px;
     }
     .garis-hubung-orang-tua {
-        width: 250px;
+        width: 196.7px;
         height: 4px;
     }
     .garis-tengah {
@@ -535,7 +546,7 @@ summary:hover {
         width: 4px;
     }
     .garis-anak {
-        width: 250px;
+        width: 196.7px;
         height: 4px;
     }
     .garis-anak-1,
@@ -545,12 +556,26 @@ summary:hover {
         height: 38px;
         width: 4px;
     }
-    .garis-anak-3,
-    .garis-anak-4{
-        margin-top: 2.5px;
-    }
-    .halaman-penjelasan::after {
-    bottom: -10px;
-    right: 12px;
+    .halaman-penjelasan::before {
+    content: "🍃";
+    position: absolute;
+    top: 130px;
+    left: 12px;
+    font-size: 45px;
+    opacity: 0.25;
+    transform: rotate(-25deg);
+    pointer-events: none;
+    z-index: 2;
 }
+.halaman-penjelasan::after {
+    content: "🍃";
+    position: absolute;
+    top: 900px;
+    font-size: 45px;
+    opacity: 0.25;
+    transform: rotate(25deg) scaleX(-1);
+    pointer-events: none;
+    z-index: 2;
+}
+
 }
