@@ -400,7 +400,7 @@ summary:hover {
         padding: 35px 25px;
     }
     .judul h1 {
-        font-size: 37.4px;
+        font-size: 50px;
     }
     .judul h2 {
         font-size: 20px;
@@ -440,12 +440,12 @@ summary:hover {
         margin: 0 auto 15px;
     }
     .judul-penjelasan h1 {
-        font-size: 33px;
+        font-size: 30px;
         margin-top: 12px;
     }
     .judul-penjelasan p {
         margin: 5px 0 15px;
-        font-size: 17px;
+        font-size: 15px;
     }
     .penjelasan {
         max-width: 100%;
@@ -457,7 +457,7 @@ summary:hover {
         line-height: 1.9;
     }
     .penjelasan p {
-        font-size: 17px;
+        font-size: 15px;
         line-height: 1.8;
     }
     .halaman-bagan {
@@ -538,7 +538,7 @@ summary:hover {
         width: 4px;
     }
     .garis-hubung-orang-tua {
-        width: 196.7px;
+        width: 180px;
         height: 4px;
     }
     .garis-tengah {
@@ -546,7 +546,7 @@ summary:hover {
         width: 4px;
     }
     .garis-anak {
-        width: 196.7px;
+        width: 180px;
         height: 4px;
     }
     .garis-anak-1,
@@ -556,26 +556,30 @@ summary:hover {
         height: 38px;
         width: 4px;
     }
+    .garis-anak-3,
+    .garis-anak-4 {
+       margin-top: 2.5px;
+    }
     .halaman-penjelasan::before {
     content: "🍃";
     position: absolute;
     top: 130px;
     left: 12px;
-    font-size: 45px;
-    opacity: 0.25;
+    font-size: 50px;
+    opacity: 0.12;
     transform: rotate(-25deg);
     pointer-events: none;
-    z-index: 2;
+    z-index: 0;
 }
 .halaman-penjelasan::after {
     content: "🍃";
     position: absolute;
     top: 900px;
-    font-size: 45px;
-    opacity: 0.25;
+    font-size: 50px;
+    opacity: 0.12;
     transform: rotate(25deg) scaleX(-1);
     pointer-events: none;
-    z-index: 2;
+    z-index: 0;
 }
 
 }
